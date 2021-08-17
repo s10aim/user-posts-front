@@ -1,15 +1,23 @@
 {
-  "dev": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-userpostfont-dev-214809-authRole",
-      "UnauthRoleArn": "arn:aws:iam::221076715594:role/amplify-userpostfont-dev-214809-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::221076715594:role/amplify-userpostfont-dev-214809-authRole",
-      "Region": "ap-northeast-1",
-      "DeploymentBucketName": "amplify-userpostfont-dev-214809-deployment",
-      "UnauthRoleName": "amplify-userpostfont-dev-214809-unauthRole",
-      "StackName": "amplify-userpostfont-dev-214809",
-      "StackId": "arn:aws:cloudformation:ap-northeast-1:221076715594:stack/amplify-userpostfont-dev-214809/0d76c9a0-fdc7-11eb-94fa-0e3c24a4d9b9",
-      "AmplifyAppId": "dd4y6xsfmalc1"
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-userpostfont-dev-214809-authRole",
+            "UnauthRoleArn": "arn:aws:iam::221076715594:role/amplify-userpostfont-dev-214809-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::221076715594:role/amplify-userpostfont-dev-214809-authRole",
+            "Region": "ap-northeast-1",
+            "DeploymentBucketName": "amplify-userpostfont-dev-214809-deployment",
+            "UnauthRoleName": "amplify-userpostfont-dev-214809-unauthRole",
+            "StackName": "amplify-userpostfont-dev-214809",
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:221076715594:stack/amplify-userpostfont-dev-214809/0d76c9a0-fdc7-11eb-94fa-0e3c24a4d9b9",
+            "AmplifyAppId": "dd4y6xsfmalc1"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "dd4y6xsfmalc1",
+                    "type": "cicd"
+                }
+            }
+        }
     }
-  }
 }
