@@ -4,7 +4,7 @@ import type { AxiosError } from 'axios'
 const globalAxios = axios.create({
   baseURL: process.env.NEXT_PUBLIC_BACKEND_BASE_URL,
   headers: {
-    'Content-type': 'apprication/json',
+    'Content-type': 'application/json',
   },
   responseType: 'json',
 })

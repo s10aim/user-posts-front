@@ -6,7 +6,7 @@ import { MetaHead } from '../components/MetaHead'
 import { errorHandring } from '../service/globalAxios'
 
 import { fetchPostsService } from '../service/posts'
-import { Post } from '../components/post'
+import { Post } from '../components/Post'
 
 import type { PostType } from '../types/post'
 
