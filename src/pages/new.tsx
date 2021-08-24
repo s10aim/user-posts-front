@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import { MetaHead } from '../components/MetaHead'
 
+import { SubmitPost } from '../components/SubmitPost'
+
 const New: NextPage = () => {
   const title = '新規投稿'
   return (
@@ -9,6 +11,7 @@ const New: NextPage = () => {
 
       <main>
         <h1>{title}</h1>
+        <SubmitPost />
       </main>
     </div>
   )
