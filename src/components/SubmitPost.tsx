@@ -1,26 +1,29 @@
-import { useRouter } from 'next/router'
-import React, { useState } from 'react'
+import router, { useRouter } from 'next/router'
+import { useCallback, useState } from 'react'
 import { errorHandring, globalAxios } from '../service/globalAxios'
 
 const SubmitPost: React.FC = () => {
   const [body, setBody] = useState<string>('')
   const router = useRouter()
 
-  const onChangeBody: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+  const onChangeBody: React.ChangeEventHandler<HTMLInputElement> = useCallback((e) => {
     setBody(e.currentTarget.value)
-  }
+  }, [])
 
-  const onSubmit = async (e: React.SyntheticEvent) => {
-    e.preventDefault()
-    const params = { post: { body } }
-    try {
-      await globalAxios.post('/posts', params)
-      alert('送信しました！')
-      router.push('/')
-    } catch (e) {
-      errorHandring(e)
-    }
-  }
+  const onSubmit = useCallback(
+    async (e: React.SyntheticEvent) => {
+      e.preventDefault()
+      const params = { post: { body } }
+      try {
+        await globalAxios.post('/posts', params)
+        alert('送信しました！')
+        router.push('/')
+      } catch (e) {
+        errorHandring(e)
+      }
+    },
+    [body, router]
+  )
 
   return (
     <form onSubmit={onSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
