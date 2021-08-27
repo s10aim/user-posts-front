@@ -25,7 +25,7 @@ const Isr: NextPage<Props> = (props) => {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
     const posts = await fetchPostsService()
     return {
